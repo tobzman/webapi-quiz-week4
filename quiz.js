@@ -24,10 +24,10 @@ function onStartQuiz() {
   countdownTimer = setInterval(function () {
     if (secondsLeft > 0) {
       timer.textContent = secondsLeft;
+      secondsLeft--;
     } else {
       stopGame();
     }
-    secondsLeft--;
   }, 1000);
   // Hide the Welcome screen
   welcome.style.display = "none";
@@ -42,11 +42,11 @@ function getNextQuestion() {
   currentQuestion++;
   console.log("current question is" + currentQuestion);
   // Display the question
-  if (currentQuestion >= questions.length) {
+  if (currentQuestion >= question.length) {
     stopGame();
     return;
   }
-  var question = questions[currentQuestion];
+  var question = question[currentQuestion];
   document.getElementById("question").textContent = question.title;
   // Display the answers
   options.innerHTML = "";
