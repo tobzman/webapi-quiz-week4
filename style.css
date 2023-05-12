@@ -1,0 +1,135 @@
+/* Define custom colors */
+:root {
+  --main-bg-color: #c07f7f;
+  --main-text-color: #c99d9d;
+  --accent-color: #007bff;
+  --button-bg-color: #d2aeae;
+  --button-text-color: #333333;
+  --button-hover-bg-color: #0d1012;
+  --button-hover-text-color: #ffffff;
+}
+
+/* Global styles */
+body {
+  background-color: var(--main-bg-color);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Header styles */
+header {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#highscores,
+#timer {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: 16px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+#highscores:hover,
+#timer:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
+  cursor: pointer;
+}
+
+/* Main styles */
+main {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+}
+
+#quiz {
+  display: none;
+}
+
+#quiz.active {
+  display: flex;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.options {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: 16px;
+  border-radius: 25px;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.options:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
+}
+
+#message,
+#result {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#result {
+  display: none;
+}
+
+#result.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#initials {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--main-text-color);
+}
+
+.btn {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: 16px 32px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
+  transform: translateY(-2px);
+}
