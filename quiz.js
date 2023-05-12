@@ -46,7 +46,7 @@ function getNextQuestion() {
     stopGame();
     return;
   }
-  var question = question[currentQuestion];
+  var question = questions[currentQuestion];
   document.getElementById("question").textContent = question.title;
   // Display the answers
   options.innerHTML = "";
